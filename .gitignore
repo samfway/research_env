@@ -6,6 +6,7 @@
 
 # Data dir / temp files
 data/
+archive/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
