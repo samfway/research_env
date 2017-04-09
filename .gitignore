@@ -1,6 +1,9 @@
 # Mac stuff
 .DS_Store
 
+# Notebooks stuff
+.ipynb_checkpoints/
+
 # vim files
 *.swp
 
