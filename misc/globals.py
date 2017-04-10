@@ -13,6 +13,7 @@ __status__ = "Development"
 from samplotlib.util import *
 from faculty_hiring.misc.util import *
 from faculty_hiring.parse import faculty_parser, institution_parser, load
+from research_env.misc.util import *
 
 import numpy as np
 import scipy as sp
@@ -28,7 +29,7 @@ np.random.seed(9)
 
 # Project directory setup
 PROJ_DIR = '/Users/samfway/Documents/Work/ClausetLab/Projects/research_env/'
-FIGS_DIR = os.path.join(PROJ_DIR, 'figures')
+FIGS_DIR = os.path.join(PROJ_DIR, 'notebooks/figures/')
 DATA_DIR = os.path.join('/Users/samfway/Documents/Work/ClausetLab/Projects/faculty_hiring/data/')
 DBLP_DIR = '/Users/samfway/Documents/Work/ClausetLab/projects/faculty_hiring/data/profiles_DBLP_Nov16/'
 
