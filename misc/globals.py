@@ -32,6 +32,7 @@ PROJ_DIR = '/Users/samfway/Documents/Work/ClausetLab/Projects/research_env/'
 FIGS_DIR = os.path.join(PROJ_DIR, 'notebooks/figures/')
 DATA_DIR = os.path.join('/Users/samfway/Documents/Work/ClausetLab/Projects/faculty_hiring/data/')
 DBLP_DIR = '/Users/samfway/Documents/Work/ClausetLab/projects/faculty_hiring/data/profiles_DBLP_Nov16/'
+GS_DIR   = '/Users/samfway/Documents/Work/ClausetLab/Projects/research_env/data/gs_profiles_042617/'
 
 BS_FACULTY_FILE = os.path.join(DATA_DIR, 'faculty_bs_CURRENT.txt') 
 CS_FACULTY_FILE = os.path.join(DATA_DIR, 'faculty_cs_CURRENT.txt') 
