@@ -9,6 +9,10 @@ __email__ = "samfway@gmail.com"
 __status__ = "Development"
 
 
+import numpy as np
+from scipy import stats
+
+
 # DBLP Adjustments from "The misleading narrative..." 
 GROW_SLOPE = 0.131873
 GROW_INTER = -258.286620
@@ -20,3 +24,19 @@ dblp_adjust = lambda x: (2011*DBLP_SLOPE+DBLP_INTER)/(x*DBLP_SLOPE+DBLP_INTER)  
 
 adjust = lambda x: (grow_adjust(x) * dblp_adjust(x))
 
+def JSD(P, Q, base=2):
+    """
+        Jensen-Shannon divergence (symmetrized version of KL div.)
+
+        Implementation built up from definition of KL divergence:
+        https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence
+        https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence
+
+        Code from:
+        http://stackoverflow.com/questions/15880133/jensen-shannon-divergence
+    """ 
+
+    _P = P / np.linalg.norm(P, ord=1)
+    _Q = Q / np.linalg.norm(Q, ord=1)
+    _M = 0.5 * (_P + _Q)
+    return 0.5 * (stats.entropy(_P, _M, base=base) + stats.entropy(_Q, _M, base=base))
